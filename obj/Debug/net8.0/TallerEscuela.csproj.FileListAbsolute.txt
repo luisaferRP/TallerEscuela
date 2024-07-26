@@ -1,0 +1,15 @@
+C:\Users\luisa\Downloads\C#\TallerEscuela\bin\Debug\net8.0\TallerEscuela.exe
+C:\Users\luisa\Downloads\C#\TallerEscuela\bin\Debug\net8.0\TallerEscuela.deps.json
+C:\Users\luisa\Downloads\C#\TallerEscuela\bin\Debug\net8.0\TallerEscuela.runtimeconfig.json
+C:\Users\luisa\Downloads\C#\TallerEscuela\bin\Debug\net8.0\TallerEscuela.dll
+C:\Users\luisa\Downloads\C#\TallerEscuela\bin\Debug\net8.0\TallerEscuela.pdb
+C:\Users\luisa\Downloads\C#\TallerEscuela\obj\Debug\net8.0\TallerEscuela.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luisa\Downloads\C#\TallerEscuela\obj\Debug\net8.0\TallerEscuela.AssemblyInfoInputs.cache
+C:\Users\luisa\Downloads\C#\TallerEscuela\obj\Debug\net8.0\TallerEscuela.AssemblyInfo.cs
+C:\Users\luisa\Downloads\C#\TallerEscuela\obj\Debug\net8.0\TallerEscuela.csproj.CoreCompileInputs.cache
+C:\Users\luisa\Downloads\C#\TallerEscuela\obj\Debug\net8.0\TallerEscuela.sourcelink.json
+C:\Users\luisa\Downloads\C#\TallerEscuela\obj\Debug\net8.0\TallerEscuela.dll
+C:\Users\luisa\Downloads\C#\TallerEscuela\obj\Debug\net8.0\refint\TallerEscuela.dll
+C:\Users\luisa\Downloads\C#\TallerEscuela\obj\Debug\net8.0\TallerEscuela.pdb
+C:\Users\luisa\Downloads\C#\TallerEscuela\obj\Debug\net8.0\TallerEscuela.genruntimeconfig.cache
+C:\Users\luisa\Downloads\C#\TallerEscuela\obj\Debug\net8.0\ref\TallerEscuela.dll
