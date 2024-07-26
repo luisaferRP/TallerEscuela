@@ -19,23 +19,10 @@ namespace TallerEscuela.models
         //Miembros metodos
         public static void AgregarEstudiante(Estudiante datoEstudiante){
             Estudiante.Add(datoEstudiante);
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine(@"
-            ****************************************
-                ¡Estudiante agregado exitosamente!
-            ****************************************");
-            Console.ResetColor();
         }
 
         public static void AgregarProfesor(Profesor profesor){
             Profesor.Add(profesor);
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine(@"
-            ****************************************
-                ¡Profesor agregado exitosamente!
-            ****************************************");
-            Console.ResetColor();
-
         }
 
         //Mostrar detalles
@@ -73,10 +60,19 @@ namespace TallerEscuela.models
 
                         if (encontradoE != null )
                         {
-                            Estudiante.Remove(encontradoE);
-                            Console.ForegroundColor = ConsoleColor.Green;
-                            Console.WriteLine("¡ Dato eliminado de forma exitosa !");
-                            Console.ResetColor();
+                            Console.WriteLine("Esta seguro de querer eliminar este estudiante? SI / NO");
+                            string? eleccion  = Console.ReadLine();
+                            if (eleccion.Equals("SI",StringComparison.OrdinalIgnoreCase))
+                            {
+                                Estudiante.Remove(encontradoE);
+                                Console.ForegroundColor = ConsoleColor.Green;
+                                Console.WriteLine("¡ Dato eliminado de forma exitosa !");
+                                Console.ResetColor();
+                            }else
+                            {
+                                Console.WriteLine("¡ Accion detenida !");
+                            }
+                          
                         }else{
                             Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("¡Ey! El dato no ha sido eliminado !");
@@ -92,10 +88,20 @@ namespace TallerEscuela.models
 
                         if (encontradoP != null )
                         {
-                            Profesor.Remove(encontradoP);
-                            Console.ForegroundColor = ConsoleColor.Green;
-                            Console.WriteLine("¡ Dato eliminado de forma exitosa !");
-                            Console.ResetColor();
+                            Console.WriteLine("Esta seguro de querer eliminar este estudiante? SI / NO");
+                            string? eleccion  = Console.ReadLine();
+                            if (eleccion.Equals("SI",StringComparison.OrdinalIgnoreCase))
+                            {
+                                Profesor.Remove(encontradoP);
+                                Console.ForegroundColor = ConsoleColor.Green;
+                                Console.WriteLine("¡ Dato eliminado de forma exitosa !");
+                                Console.ResetColor();
+                               
+                            }else
+                            {
+                                Console.WriteLine("¡ Accion detenida !");
+                            }
+                      
                         }else{
                             Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("¡Ey! El dato no ha sido eliminado !");
@@ -105,9 +111,8 @@ namespace TallerEscuela.models
                     
                     default:
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("¡Ey! El dato ingresado no es valido !");
+                        Console.WriteLine("¡Ey! la opcion ingresada no es valida !");
                         Console.ResetColor();
-
                         break;
                 }
                 

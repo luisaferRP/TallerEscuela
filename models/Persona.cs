@@ -29,8 +29,9 @@ namespace TallerEscuela.models
         public virtual void MostrarDetalles()
         {
             Console.WriteLine(@$"
-        °°°°Id: {Id,-10} , Nombre :{Nombre,-10} , Apellido: {Apellido,-10} , Tipo Documento: {TipoDocumento,-10} 
-            Numero Documento : {NumeroDocumento,-10} , Email: {Email,-10} ,Telefono : {Telefono,-10} ");
+        ____________________________________________________________________________________________________________________
+        Id: {Id,-10} , Nombre :{Nombre,-10} , Apellido: {Apellido,-10} , Tipo Documento: {TipoDocumento,-10} , 
+        Numero Documento : {NumeroDocumento,-10} , Email: {Email,-10} ,Telefono : {Telefono,-10} ");
 
         }
     }

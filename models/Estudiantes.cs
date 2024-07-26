@@ -40,14 +40,60 @@ namespace TallerEscuela.models
 
             // Mostramos los detalles específicos de Estudiante
             Console.WriteLine(@$"
-            Nombre del acudiente : {NombreAcudiente,-10} , Curso: {CursoActual,-10} , Fecha de Nacimiento: {FechaNacimiento:yyyy-MM-dd,-10} ,Calificaciones: {calificacionesDetalles} °°°°");
+            Nombre del acudiente : {NombreAcudiente,-10} , Curso: {CursoActual,-10} , Fecha de Nacimiento: {FechaNacimiento:yyyy-MM-dd,-10} ,Calificaciones: {calificacionesDetalles}");
+        }
+
+
+        public void editar(string id)
+        {
+            int op = 0;
+            Console.WriteLine(@$"
+            ************************
+            Que deseas editar? :
+            1. Nombre.
+            2. Apellido.
+            3. Las calificaciones.
+            *************************");
+            op = Convert.ToInt16(Console.ReadLine());
+            switch (op)
+            {
+                case 1:
+                    Console.WriteLine($"Ingresa el nuevo nombre del estudiante: ");
+                    string? nombre = Console.ReadLine();
+                    this.Nombre = nombre;
+                    break;
+                case 2:
+                    Console.WriteLine($"Ingresa el nuevo apellido del estudiante: ");
+                    string? apellido = Console.ReadLine();
+                    this.Apellido = apellido;
+                    break;
+                case 3:
+                    Console.WriteLine("Notas actuales: ");
+                    Console.Write("[");
+                    Calificaciones.ForEach(cali => Console.Write(" " + cali + " "));
+                    Console.WriteLine("]");
+                    Calificaciones.Clear();
+                    AgregarCalificacion();
+                    break;
+                default:
+                    Console.WriteLine("Ingresa una opcion valida");
+                    break;
+            }
         }
 
 
 
         //Miembros metodos
-        public void AgregarCalificacion(double nota){
-            Calificaciones.Add(nota);
+        public void AgregarCalificacion(){
+            Console.WriteLine("¿Cuantas calificaciones desea agregar?");
+            int total = Convert.ToInt16(Console.ReadLine());
+
+            for (int i = 0; i < total; i++)
+            {
+                Console.WriteLine("Calificacion {0}: ",i);
+                double notas = Convert.ToDouble(Console.ReadLine());
+                Calificaciones.Add(notas);
+            }
         }
 
         public void CalcularPromedio(){
