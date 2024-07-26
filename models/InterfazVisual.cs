@@ -12,12 +12,17 @@ namespace TallerEscuela.models
             ================================================
                         ¿QUE DESEAS HACER?
             ================================================
-                        1.Agregar.
-                        2.Editar.
-                        3.liminar.
-                        4.Realizar Consultas.
-            =================================================
-            ");
+                        1.Agregar Estudiante.
+                        2.Editar Estudiante.
+                        3.Mostrar Estudiantes.
+                        4.Eliminar Estudiante.
+                        5.Agregar Profesor.
+                        6.Editar Profesor.
+                        7.Mostrar Profesor.
+                        8.Eliminar Profesor.
+            ================================================
+                    Ingresa una opcion:
+            =================================================");
 
         }
     }

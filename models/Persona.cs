@@ -15,11 +15,23 @@ namespace TallerEscuela.models
         protected string? Email;
         protected string? Telefono;
 
-        //miembro metodo
-        public void MostrarDetalles(){
-            
+        public Persona(string nombre,string apellido,string tipoDocumento,string numeroDocumento,string email,string telefono){
+            this.Id= Guid.NewGuid();
+            this.Nombre = nombre;
+            this.Apellido = apellido;
+            this.TipoDocumento = tipoDocumento;
+            this.NumeroDocumento = numeroDocumento;
+            this.Email = email;
+            this.Telefono = telefono;
         }
 
+        // Miembro método virtual,permitir que las clases derivadas lo sobreescriban
+        public virtual void MostrarDetalles()
+        {
+            Console.WriteLine(@$"
+        °°°°Id: {Id,-10} , Nombre :{Nombre,-10} , Apellido: {Apellido,-10} , Tipo Documento: {TipoDocumento,-10} 
+            Numero Documento : {NumeroDocumento,-10} , Email: {Email,-10} ,Telefono : {Telefono,-10} ");
 
+        }
     }
 }
