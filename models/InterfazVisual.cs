@@ -8,6 +8,7 @@ namespace TallerEscuela.models
     public class InterfazVisual 
     {
         public static void AdministrarPrograma(){
+             Console.Clear();
             Console.WriteLine(@"
             ================================================
                         ¿QUE DESEAS HACER?

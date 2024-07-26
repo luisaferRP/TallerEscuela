@@ -35,6 +35,36 @@ namespace TallerEscuela.models
             Asignatura: {Asignatura,-10} °°° Salario :{Salario,-10} °°° Fecha de contratacion: {FechaContratacion: yyyy-mm-dd,-10} °°°");
         }
 
+        //editar profesor
+        public void editar(string id)
+        {
+            int op = 0;
+            Console.WriteLine(@$"
+            ************************
+            Que deseas editar? :
+            1. Asignatura.
+            2. Salario.
+            *************************");
+            op = Convert.ToInt16(Console.ReadLine());
+            switch (op)
+            {
+                case 1:
+                    Console.WriteLine($"Ingresa el nuevo nombre de la asignatura: ");
+                    string? asignatura = Console.ReadLine();
+                    this.Asignatura = asignatura;
+                    break;
+                case 2:
+                    Console.WriteLine($"Ingresa el nuevo salario: ");
+                    double salario = Convert.ToDouble(Console.ReadLine());
+                    this.Salario = salario;
+                    break;
+                  
+                default:
+                    Console.WriteLine("Ingresa una opcion valida");
+                    break;
+            }
+        }
+
         //Miembro metodos
         public int CalcularAntiguedad(){
             return 2;

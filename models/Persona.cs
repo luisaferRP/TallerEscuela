@@ -30,8 +30,10 @@ namespace TallerEscuela.models
         {
             Console.WriteLine(@$"
         ____________________________________________________________________________________________________________________
-        Id: {Id,-10} , Nombre :{Nombre,-10} , Apellido: {Apellido,-10} , Tipo Documento: {TipoDocumento,-10} , 
-        Numero Documento : {NumeroDocumento,-10} , Email: {Email,-10} ,Telefono : {Telefono,-10} ");
+        Id: {Id,-10} ,
+        Nombre :{Nombre,-10} , Apellido: {Apellido,-10}
+        Tipo Documento: {TipoDocumento,-10} , Numero Documento : {NumeroDocumento,-10}
+        Email: {Email,-10} ,Telefono : {Telefono,-10} ");
 
         }
     }

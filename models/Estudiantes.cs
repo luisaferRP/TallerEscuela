@@ -40,7 +40,8 @@ namespace TallerEscuela.models
 
             // Mostramos los detalles específicos de Estudiante
             Console.WriteLine(@$"
-            Nombre del acudiente : {NombreAcudiente,-10} , Curso: {CursoActual,-10} , Fecha de Nacimiento: {FechaNacimiento:yyyy-MM-dd,-10} ,Calificaciones: {calificacionesDetalles}");
+            Nombre del acudiente : {NombreAcudiente,-10} , Curso: {CursoActual,-10} 
+            Fecha de Nacimiento: {FechaNacimiento:yyyy-MM-dd,-10} ,Calificaciones: {calificacionesDetalles}");
         }
 
 
@@ -90,18 +91,28 @@ namespace TallerEscuela.models
 
             for (int i = 0; i < total; i++)
             {
-                Console.WriteLine("Calificacion {0}: ",i);
+                Console.WriteLine("Calificacion {0}: ",+i);
                 double notas = Convert.ToDouble(Console.ReadLine());
                 Calificaciones.Add(notas);
             }
         }
 
-        public void CalcularPromedio(){
+        public double CalcularPromedio()
+        {
+            double acumulador = 0;
+            foreach (var calificacion in Calificaciones)
+            {
+                acumulador += calificacion;
+            }
+            return acumulador / (double) Calificaciones.Count;
 
+        }
+        public double ObtenerPromedio(){
+            return CalcularPromedio();
         }
 
         public int CalcularEdad(){
-            return 2;
+            return DateOnly.FromDateTime(DateTime.Today).Year - FechaNacimiento.Year;
         }
 
     }

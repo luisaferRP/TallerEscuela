@@ -11,8 +11,12 @@ namespace TallerEscuela.models
         public static List<Profesor> Profesor;
 
         static AdministradorApp(){
-            
-            Estudiante = new List<Estudiante>(){};
+
+            Estudiante = new List<Estudiante>
+            {
+                new Estudiante("luisa", "ramirez", "C.C", "10029303", "luisa@gmail.com", "222334", "Ivan", "11°", new DateOnly(2024, 02, 12))
+            };
+
             Profesor = new List<Profesor>(){};
         }
 
